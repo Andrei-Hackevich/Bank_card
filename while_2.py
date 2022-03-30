@@ -7,9 +7,12 @@ if a<b and a<0:
     if a==-1:
         print('Отрицательных чисел между вашими числами нет')
     else:
-        while a<0:
+        while a<0 and a<b:
             a+=1
             if a==0:
+                break
+            elif a==b-1:
+                print(a)
                 break
             else:
                 print(a)
@@ -17,11 +20,15 @@ elif b<a and b<0:
     if b==-1:
         print('Отрицательных чисел между вашими числами нет')
     else:
-        while b<0:
+        while b<0 and b<a:
             b +=1
             if b==0:
                 break
-            print(b)
+            elif b==a-1:
+                print(b)
+                break
+            else:
+                print(b)
 else:
     print('Вы не вводили отрицательных чисел')
 
